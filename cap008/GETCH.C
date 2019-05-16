@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+
+void main(void)
+{
+  char ch;
+
+  printf("Entre com algum texto (digite um ponto para sair).\n");
+  do {
+    ch = getch();
+
+    if(islower(ch)) ch = toupper(ch);
+    else ch = tolower(ch);
+
+    putchar(ch);
+  } while (ch!='.');
+}
