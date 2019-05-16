@@ -1,0 +1,17 @@
+/* Programa #4 de demostra‡ao de Little C. */
+/* Este programa demonstra fun‡oes recursivas. */
+main()
+{
+  print(factr(7) * 2);
+}
+
+/* retorna o fatorial de i */
+factr(int i)
+{
+  if(i<2) {
+    return 1;
+  }
+  else {
+    return i * factr(i-1);
+  }
+}

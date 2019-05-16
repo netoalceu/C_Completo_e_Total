@@ -1,0 +1,56 @@
+/* Programa #1 de demostra‡ao de Little C. */
+
+   Este programa demostra todos os recursos
+   de C que sao reconhecidos por Little C.
+*/
+
+int i, j;   /* vari veis globais */
+char ch;
+
+main()
+{
+  int i, j;   /* vari veis locais */
+
+  puts("Programa de Demostra‡ao Little C.");
+
+  print_alpha();
+
+  do {
+    puts("entre um n£mero (0 para sair): ");
+    i = getnum();
+    if (i < 0 ) {
+      puts("n£meros tˆm que ser positivos, tente de novo");
+    }
+    else {
+      for (j = 0; j < i; j=j+1) {
+        print(j);
+        print("somado ‚");
+        print(sum(j));
+        puts("");
+      }
+    }
+  } while(i!=0);
+}
+
+/* Soma os valores entre 0 e num. */
+sum(int num)
+{
+  int running_sum;
+
+  running_sum = 0;
+
+  while(num) {
+    running_sum = running_sum + num;
+    num = num - 1;
+  }
+  return running_sum;
+}
+
+/* Imprime o alfabeto. */
+print_alpha()
+{
+  for(ch = 'A'; ch<='Z'; ch = ch + 1) {
+    putch(ch);
+  }
+  puts("");
+}

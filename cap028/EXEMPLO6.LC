@@ -1,0 +1,28 @@
+/* Programa #6 de demostra‡ao de Little C. */
+/* Os comandos de repeti‡ao. */
+main()
+{
+  int a;
+  char ch;
+
+  /* o while */
+  puts("Entre um n£mero: ");
+  a = getnum();
+  while(a) {
+    print(a);
+    print(a*a);
+    puts("");
+    a = a - 1;
+  }
+
+  /* o do-while */
+  puts("entre caracteres, 's' para sair");
+  do {
+    ch = getche();
+  } while(ch!='s');
+
+  /* o for */
+  for(a=0; a<10; a = a + 1) {
+    print(a);
+  }
+}
